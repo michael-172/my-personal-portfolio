@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.mySwiper{
+  overflow-y: visible !important;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background-color: #F22225 !important;
+}

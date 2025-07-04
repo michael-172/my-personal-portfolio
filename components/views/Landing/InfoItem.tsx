@@ -3,7 +3,7 @@ import { LuMessageCirclePlus } from "react-icons/lu";
 
 const InfoItem = () => {
   return (
-    <div className="flex flex-col gap-2 absolute top-0 right-0  py-4 px-9 w-[136px] h-[170px] shrink-0 [background:#FFF] shadow-[5px_5px_10px_0px_rgba(124,124,124,0.20)] rounded-[20px]">
+    <div className="flex animate-pulse flex-col gap-2 absolute top-0 right-0  py-4 px-9 w-[136px] h-[170px] shrink-0 [background:#FFF] shadow-[5px_5px_10px_0px_rgba(124,124,124,0.20)] rounded-[20px]">
       <div className="w-[60px] flex items-center justify-center rounded-full h-[60px] shrink-0 bg-[#ECF5FF]">
         <LuMessageCirclePlus className="text-primary" size={30} />
       </div>

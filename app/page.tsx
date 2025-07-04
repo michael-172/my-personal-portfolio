@@ -1,3 +1,4 @@
+"use client";
 import LandingSection from "@/components/LandingSection";
 import SmallHaeder from "@/components/SmallHaeder";
 import Services from "@/components/views/Landing/Services";

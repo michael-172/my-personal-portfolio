@@ -4,10 +4,19 @@ import DefaultButton from "@/components/shared/DefaultButton";
 import React from "react";
 import { IoDownloadOutline } from "react-icons/io5";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex flex-col container gap-20 mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 1 },
+      }}
+      viewport={{ once: true }}
+      className="flex flex-col container gap-20 mx-auto"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         {/* Left side - Profile and mockups */}
         <div className="relative gap-4 flex justify-center">
@@ -15,11 +24,13 @@ const About = () => {
           {/* Profile image */}
           <div className="w-8/12">
             <div className="w-full h-96 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <div className="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                <p className="text-sm">Profile Image</p>
-                <p className="text-xs">(Replace with actual image)</p>
-              </div>
+              <Image
+                src={"/images/IMG_3737.jpg"}
+                width={400}
+                height={400}
+                alt=""
+                className="w-full h-full object-cover rounded-lg object-top"
+              />
             </div>
           </div>
           {/* Device mockups */}
@@ -79,7 +90,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

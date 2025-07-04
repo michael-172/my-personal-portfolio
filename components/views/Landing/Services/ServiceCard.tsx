@@ -15,7 +15,7 @@ const ServiceCard = ({
     <div
       className="group *:transition-all 
       bg-white hover:bg-primary ease-in-out duration-300
-      min-w-[377px] w-full max-w-full h-[361px] py-11  shrink-0  shadow-[8px_8px_20px_3px_rgba(147,147,147,0.13)] flex flex-col gap-5"
+     min-w-full xl:min-w-[377px] w-full max-w-full h-[361px] py-11  shrink-0  shadow-[8px_8px_20px_3px_rgba(147,147,147,0.13)] flex flex-col gap-5"
     >
       <div className="flex flex-col gap-5 px-8">
         <div className="w-[60px] h-[60px] flex items-center justify-center">

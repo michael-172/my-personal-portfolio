@@ -5,10 +5,19 @@ import ServiceCard from "./ServiceCard";
 import { LuQrCode } from "react-icons/lu";
 import { IoCodeSlash } from "react-icons/io5";
 import { FaFigma } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <div className="flex flex-col container gap-20 mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 1 },
+      }}
+      viewport={{ once: true }}
+      className="flex flex-col container gap-20 mx-auto"
+    >
       <div className="w-full flex flex-col items-center justify-center">
         <SmallHaeder title="My Services" />
         <div className="w-[565px] max-w-full *:text-center">
@@ -16,7 +25,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="container w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className=" w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <ServiceCard
           title="Web Design"
           icon={<LuQrCode size={55} className="icon" />}
@@ -36,7 +45,7 @@ const Services = () => {
             aibus minima veniam."
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

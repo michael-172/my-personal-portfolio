@@ -8,7 +8,7 @@ const Footer = () => {
         <h2 className="text-3xl font-bold mb-4">
           Port<span className="text-red-500">folio.</span>
         </h2>
-        <div className="flex space-x-8 mb-6">
+        <div className="flex space-x-8 mb-6 flex-wrap justify-center">
           <a href="#" className="hover:text-red-500 transition">
             Home
           </a>

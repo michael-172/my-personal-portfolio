@@ -10,6 +10,7 @@ import SmallHeader from "@/components/SmallHaeder";
 import MainTitle from "@/components/MainTitle";
 import DefaultButton from "@/components/shared/DefaultButton";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const RecentProjects = () => {
   const swiperRef = useRef<any>(null);
@@ -48,7 +49,15 @@ const RecentProjects = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 1 },
+      }}
+      viewport={{ once: true }}
+      className="container mx-auto"
+    >
       <div className="flex justify-between items-center mb-10">
         <div>
           <SmallHeader title="Recent Projects" />
@@ -92,14 +101,14 @@ const RecentProjects = () => {
           clickable: true,
           enabled: true,
         }}
-        slidesPerView={3}
+        slidesPerView={"auto"}
         spaceBetween={30}
         modules={[Navigation, Pagination]}
-        className="mySwiper !h-[625px] !w-full"
+        className="mySwiper !h-[570px] xl:!h-[625px] !w-full"
       >
         {projects.map((project, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
+          <SwiperSlide key={index} className="!w-[385px] !h-fit">
+            <div className="bg-white !w-full p-6 rounded-lg border border-gray-200">
               <div className="overflow-hidden rounded-lg">
                 <Image
                   src={project.image}
@@ -124,10 +133,7 @@ const RecentProjects = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="text-center">
-        <DefaultButton title="Explore More" rounded="lg" />
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

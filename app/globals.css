@@ -17,3 +17,9 @@
 .mySwiper .swiper-pagination-bullet-active {
     background-color: #F22225 !important;
 }
+
+
+
+.container {
+  @apply max-w-7xl mx-auto px-8 sm:px-6 lg:px-8;
+}
